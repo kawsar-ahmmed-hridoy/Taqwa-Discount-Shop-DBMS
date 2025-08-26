@@ -7,8 +7,9 @@ CREATE TABLE customers (
     gender ENUM('Male','Female','Other') DEFAULT 'Male',
     customerType ENUM('Individual','Business','Wholesale') DEFAULT 'Individual',
     customerStatus ENUM('Regular','VIP','Inactive','Blocked') DEFAULT 'Regular',
-    joinDate DATE NOT NULL DEFAULT (CURRENT_DATE),
+    joinDate DATE NOT NULL DEFAULT NOW(),
     lastPurchaseDate DATE,
     totalSpending DECIMAL(12,2) DEFAULT 0.00,
     loyaltyPoints INT DEFAULT 0
 );
+

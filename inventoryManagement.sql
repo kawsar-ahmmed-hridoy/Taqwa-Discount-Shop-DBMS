@@ -3,7 +3,7 @@ CREATE TABLE inventoryManagement (
     productID INT NOT NULL,
     changeType ENUM('IN','OUT') NOT NULL,
     quantity INT NOT NULL,
-    changeDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    changeDate DATE DEFAULT NOW(),
     remarks TEXT,
     FOREIGN KEY (productID) REFERENCES products(productID)
 );
